@@ -1,0 +1,29 @@
+<%= form_for @todo do |f|%>
+
+<% if @todo.errors.any? %>
+<h2>Following errors causes data saving failire</h2>
+<ul>
+
+	<% @todo.errors.full_messages.each do |msg| %>
+	<li><%= msg %></li>
+	<% end %>
+	
+</ul>
+
+<% end %>
+
+	<p>
+		<%= f.label :name%><br>
+		<%= f.text_field :name%>
+	</p>
+
+	<p>
+		<%= f.label :discription%><br>
+		<%= f.text_area :discription%>
+	</p>
+
+	<p>
+		<%= f.submit :create%>
+	</p>
+
+<%end%> 
