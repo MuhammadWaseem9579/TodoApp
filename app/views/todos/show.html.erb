@@ -1,3 +1,5 @@
 <h1>Data saved Successfully</h1>
 <h3>Name        : <%= @todo.name %></h3>
 <h3>Description :<%= @todo.discription %></h3>
+<%= link_to "Edit", edit_todo_path(@todo) %>
+<%= link_to "Back to Todos", todos_path %>
